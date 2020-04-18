@@ -5,7 +5,7 @@ import { Droppable } from "react-beautiful-dnd";
 
 const TrelloList = ({title, cards, listID}) =>{
     return (
-      <Droppable droppableID={String(listID)}>
+      <Droppable droppableId={listID}>
         {(provided) => (
           <div
           {...provided.droppableProps}
