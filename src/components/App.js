@@ -4,7 +4,13 @@ import { connect } from "react-redux";
 import TrelloActionButton from "./TrelloActionButton";
 import { DragDropContext } from "react-beautiful-dnd";
 import { sort } from "../actions";
+import styled from "styled-components";
 
+
+const ListContainer = styled.div`
+    display: flex;
+    flex-Direction: row;
+`;
 
 class App extends Component{
 
@@ -35,7 +41,7 @@ class App extends Component{
           <DragDropContext onDragEnd={this.onDragEnd}>
             <div className="App">
               <h1>Chronicles of Hogwarts</h1>
-              <div style={styles.listContainer}>
+              <ListContainer>
                 {lists.map((list) => (
                   <TrelloList
                     listID={list.id}
@@ -45,7 +51,7 @@ class App extends Component{
                   />
                 ))}
                 <TrelloActionButton list />
-              </div>
+              </ListContainer>
             </div>
           </DragDropContext>
         );
