@@ -77,7 +77,7 @@ class TrelloActionButton extends Component{
                 color: buttonTextColor,
                 backgroundColor: buttonTextBackground
             }}>
-                <Icon> add </Icon>
+                <Icon>add</Icon>
                 <p>{buttonText}</p>
             </div>
         )
